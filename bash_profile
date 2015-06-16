@@ -47,7 +47,6 @@ else
 fi
 
 ## Aliases
-alias git-kaboom="git reset --hard HEAD && git checkout . && git clean -f" #Kills all local changes and takes repo back to original state
 alias phpunit="php phpunit.php --verbose --colors"
 alias py="python"
 alias tac='tail -r'
@@ -58,7 +57,8 @@ alias mkdir='mkdir -pv'
 alias mount='mount |column -t'
 alias path='echo -e ${PATH//:/\\n}'
 alias su='sudo -i'
-alias puppetlink="puppet parser validate"
+alias git-undo-commit='git reset --soft '\''HEAD^'\'''
+alias git-kaboom="git reset --hard HEAD && git checkout . && git clean -f" #Kills all local changes and takes repo back to original state
 
 ## Functions
 dos2unix(){
@@ -71,6 +71,5 @@ unix2dos(){
 }
 
 sqlc(){
-	echo "$1" | mysql -u root -D kiva_clean;
+	echo "$1" | mysql -u root -D $2;
 }
-
