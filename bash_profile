@@ -1,3 +1,5 @@
+EDITOR=vim
+
 ## Start SSH agent
 
 SSH_ENV="$HOME/.ssh/environment"
@@ -50,7 +52,7 @@ fi
 alias phpunit="php phpunit.php --verbose --colors"
 alias py="python"
 alias tac='tail -r'
-alias clear-dns='sudo killall -HUP mDNSResponder'
+alias clear-dns='sudo discoveryutil udnsflushcaches'
 alias updatedb="sudo -u martin /usr/libexec/locate.updatedb"
 alias grep="grep --colour=auto"
 alias mkdir='mkdir -pv'
