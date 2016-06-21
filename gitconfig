@@ -14,3 +14,7 @@
 [core]
 	autocrlf = input
 	safecrlf = true
+[push]
+	default = matching
+[pull]
+	rebase = true

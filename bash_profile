@@ -61,6 +61,10 @@ alias path='echo -e ${PATH//:/\\n}'
 alias su='sudo -i'
 alias git-undo-commit='git reset --soft '\''HEAD^'\'''
 alias git-kaboom="git reset --hard HEAD && git checkout . && git clean -f" #Kills all local changes and takes repo back to original state
+alias clear-dns='sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder'
+alias docker-env='eval "$(docker-machine env default)"'
+
+eval "$(docker-machine env default)"
 
 ## Functions
 dos2unix(){
