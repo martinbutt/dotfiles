@@ -103,6 +103,7 @@ alias git-kaboom="git reset --hard HEAD && git checkout . && git clean -f" #Kill
 alias docker-env='eval "$(docker-machine env default)"'
 
 eval $(docker-machine env default)
+echo "tell app \"Terminal\" to set current settings of first window to settings set \"Martin Dark Yellow\"" | osascript;
 
 unsetopt share_history
 
@@ -112,7 +113,7 @@ ssh() {
 	elif [ "$1" = "worker" ]; then
 		TERM_TEXT_COLOR="Red";
 	else
-		TERM_TEXT_COLOR="Blue";
+		TERM_TEXT_COLOR="White";
 	fi
 
 	echo "tell app \"Terminal\" to set current settings of first window to settings set \"Martin Dark ${TERM_TEXT_COLOR}\"" | osascript;
